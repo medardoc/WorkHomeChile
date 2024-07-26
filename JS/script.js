@@ -14,6 +14,7 @@ function showSlides() {
     slides[slideIndex - 1].style.display = 'block';
     setTimeout(showSlides, 3000); // Cambiar imagen cada 3 segundos
 }
+
 document.addEventListener('DOMContentLoaded', function() {
     const chatBubble = document.getElementById('chat-bubble');
     const chatContainer = document.getElementById('chat-container');
@@ -29,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const userMessage = userInput.value;
         appendMessage('user', userMessage);
 
-        // Verificar si el mensaje del usuario es una cadena (String)
         if (isNaN(userMessage)) {
             switch (userMessage.toLowerCase()) {
                 case 'whatsapp':
@@ -48,32 +48,32 @@ document.addEventListener('DOMContentLoaded', function() {
                     }, 500);
                     break;
                 default:
-                    // Si el mensaje del usuario no coincide con ninguna opción, dar la bienvenida
                     setTimeout(function() {
-                        appendMessage('bot', '¡Bienvenidos a WorkHomeChile! ¿En qué puedo ayudarte? Puedes decirme "Hablarnos al WhatsApp", "Llámanos" o "Envíanos un correo".');
-                    }, 500);
+                        appendMessage('bot', 
+                            '¡Bienvenidos a WorkHomeChile!' +
+                            '¿En qué puedo ayudarte?'+ 
+                            'Presiona 1: Envianos un WhatsApp, Presiona 2: Envianos un correo, Presiona 3: Llamanos.');
+                        }, 500);
             }
         } else {
-            // Si el mensaje del usuario es un número entero
             const option = parseInt(userMessage);
             switch (option) {
                 case 1:
                     setTimeout(function() {
-                        appendMessage('bot', 'Si prefieres llamarnos, nuestro número de teléfono es +56931462301. Estamos disponibles para ayudarte.');
+                        appendMessage('bot', '¡Claro! Puedes contactarnos a través de WhatsApp al número +123456789.');
                     }, 500);
                     break;
                 case 2:
                     setTimeout(function() {
-                        appendMessage('bot', '¡Claro! Puedes contactarnos a través de WhatsApp al número +56931462301');
+                        appendMessage('bot', 'Si prefieres comunicarte por correo electrónico, puedes escribirnos a info@workhomechile.com. Te responderemos lo antes posible.');
                     }, 500);
                     break;
                 case 3:
                     setTimeout(function() {
-                        appendMessage('bot', 'Si prefieres comunicarte por correo electrónico, puedes escribirnos a info@workhomechile.com. Te responderemos lo antes posible.');
+                        appendMessage('bot', 'Si prefieres llamarnos, nuestro número de teléfono es +987654321. Estamos disponibles para ayudarte.');
                     }, 500);
                     break;
                 default:
-                    // Si el usuario ingresa un número que no coincide con ninguna opción
                     setTimeout(function() {
                         appendMessage('bot', 'No comprendo tu mensaje. ¿Puedes ser más específico?');
                     }, 500);

@@ -1,34 +1,35 @@
 <!DOCTYPE html>
- <html lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WorkHomeChile</title>
+    <title>Workhomechile</title>
+    <link rel="icon" href="img/logoW.png" type="image/png">
     <link rel="stylesheet" href="CSS/style.css">
 </head>
-<header>   
-    <br>
-    <!-- Logo dela empresa -->
-<div class="Box">
-    <img src="img/logoW.png" alt="Imagen 1">
-</div>
-</header>
-<br>
 <body>
-<!-- Slider de imágenes -->
-<div class="slider">
-    <div class="slides">
-        <div class="slide"><img src="img/Cocina.jpg" alt="Imagen 1"></div>
-        <div class="slide"><img src="img/muebleBaño.jpeg" alt="Imagen 2"></div>
-        <div class="slide"><img src="img/cocina4.jpeg" alt="Imagen 3"></div>
-        <div class="slide"><img src="img/cocina5.jpeg" alt="Imagen 4"></div>
-        <div class="slide"><img src="img/cocina6.jpeg" alt="Imagen 5"></div>
-        <div class="slide"><img src="img/muebletv.jpeg" alt="Imagen 6"></div>
-        <!-- Agrega más imágenes según sea necesario -->
-    </div>
-</div>
-    <div id="chat-bubble">
+    <header>
+        <div class="header-container">
+            <div class="container">
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#"><img src="img/logoW.png"  width="130" height="130"  alt="Logo Worhomechile"></a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Nuestros Productos</a></li>
+                        <li><a href="#">Nuestros Servicios</a></li>
+                        <li><a href="#">Contactactanos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <h1>¡Bienvenidos a la familia WorkhomeChile!</h1>
+    <p>Nuestro desafío es poder lograr crear el ambiente de interiores de tus sueños, contactanos y cotiza con nosotros.</p>
+    <br>
+<div id="chat-bubble">
         <div id="chat-icon">+</div>
     </div>
     <div id="chat-container">
@@ -40,15 +41,80 @@
         <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
         <button id="send-button">Enviar</button>
     </div>
-<!--Con esta etiqueta damos espacio-->
-<br>
-       <!--Agregamos el main para aplicar las secciones-->
+    <div class="slider">
+        <div class="slides">
+            <div class="slide"><img src="img/Cocina.jpg" alt="Imagen 1"></div>
+            <div class="slide"><img src="img/muebleBaño.jpeg" alt="Imagen 2"></div>
+            <div class="slide"><img src="img/cocina4.jpeg" alt="Imagen 3"></div>
+            <div class="slide"><img src="img/cocina5.jpeg" alt="Imagen 4"></div>
+            <div class="slide"><img src="img/cocina6.jpeg" alt="Imagen 5"></div>
+            <div class="slide"><img src="img/muebletv.jpeg" alt="Imagen 6"></div>
+        </div>
+    </div>
     <main>
-        <section>
+       <section id="empresas-reconocidas">
+            <h2>Empresas Reconocidas con las que Hemos Trabajado</h2>
+            <div class="empresa-logo">
+                <img src="img/h_m-removebg-preview.png" alt="H&M">
+                
+            </div>
+            <div class="empresa-logo">
+                <img src="img/doctor-removebg-preview.png" alt="Farmacia Doctor Simi">
+                
+            </div>
+            <div class="empresa-logo">
+                <img src="img/sodimac-removebg-preview.png" alt="Sodimac">
+                
+            </div>
+            <div class="empresa-logo">
+                <img src="img/fal-removebg-preview.png" alt="Falabella">
+                
+            </div>
+        </section>
+        <section class="container-section">
+            <div class="card">
+                <img src="img/cocina6.jpeg" alt="cocinas" width="400" height="400">
+                <h3>Cocinas</h3>
+                <p>Consulta por tu cocina</p>
+                <button onclick="window.location.href='index/horario.html'" class="btnView">ir a ver</button>
+            </div>
+            <div class="card">
+                <img src="img/muebleBaño.jpeg" alt="baños" width="400" height="400">
+                <h3>Baños</h3>
+                <p>Consulta por tu baño</p>
+                <button onclick="window.location.href='index/reporteAsistencia.html'" class="btnView">ir a ver</button>
+            </div>
+            <div class="card">
+                <img src="img/muebletv2.png" alt="tv" width="400" height="400">
+                <h3>Muebles TV</h3>
+                <p>Consulta por tu mueble tv</p>
+                <button onclick="window.location.href='index/calificaciones.html'" class="btnView">ir a ver</button>
+            </div>
+            <div class="card">
+                <img src="img/cocina5.jpeg" alt="Solicitudes" width="400" height="400">
+                <h3>Cocinas</h3>
+                <p>Realiza tus solicitudes académicas</p>
+                <button onclick="window.location.href='index/solicitudes.html'" class="btnView">ir a ver</button>
+            </div>
+            <div class="card">
+                <img src="img/cocina3.png" alt="Pagos" width="400" height="400">
+                <h3>Cocinas</h3>
+                <p>Cocinas al mejor estilo</p>
+                <button onclick="window.location.href='index/pagos.html'" class="btnView">ir a ver</button>
+            </div>
+            <div class="card">
+                <img src="img/Cocina.jpg" alt="Asignaturas" width="400" height="400">
+                <h3>Cocinas al mejor estilo</h3>
+                <p>Consulta por tu productos</p>
+                <button onclick="window.location.href='index/asignaturas.html'" class="btnView">ir a ver</button>
+            </div>
+        </section>
+        
+         <section>
             <h3> Nuestros trabajos:</h3>
             <ul>
                 <li>Marmoleria</li>
-                <li>Muebleria:</li>
+                <li>Muebleria</li>
                 <li>Closet</li>
                 <li>Cocinas</li>
                 <li>Dormitorios</li>
@@ -58,23 +124,23 @@
                 <li>Pisos</li>
                 <li>Livin</li>
                 <li>Patios</li>
-            
+                <li>Limpieza de Alfombras</li>
             </ul>  
         </section>
         <section>
             <h3>Nuestros canales de contactos:</h3>
             <ul>
                 <li>Instagram: @WorkHomeChile</li>
-                <li><a href="https://tripleten.com/es-chl/data-analyst/meet/?utm_source=google&utm_medium=cpc&utm_campaign=inhouse_gl_chl_meetland_da_ua_sem_424&utm_content=cid--21170586137inhouse_gl_chl_meetland_da_ua_sem_424_gid--160433506269_adset--_creative--696074475262_adname--_network--g_tid--kwd-27567871189_tg--_placement--_dvc--c_loc--1003325&utm_term=_key--curso%20de%20python&gad_source=1&gclid=EAIaIQobChMIk6LB1666hQMVJUxHAR0qFA4QEAAYAiAAEgKJv_D_BwE">Facebook</a></li>
+                <li><a href="#">Facebook</a></li>
                 <li>Celular: +56 931462301</li>
             </ul>
         </section>
     </main>
    
-    <script src="JS/script.js"></script>
     <footer>
-        <p>&copy; 2024 WorkHomeChile. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Worhomechile. Todos los derechos reservados.</p>
     </footer>
 
+    <script src="JS/script.js"></script>
 </body>
 </html>
