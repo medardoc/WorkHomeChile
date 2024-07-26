@@ -7,55 +7,27 @@
     <title>WorkHomeChile</title>
     <link rel="stylesheet" href="CSS/style.css">
 </head>
-<header>
-    <nav>
-        <ul>
-            <li><a href="/index/about.html">About</a></li>
-            <li><a href="https://app.luminpdf.com/viewer/66953670427fb9c7d388a49c" target="_blank">Mi Curriculo Vitae</a></li>
-            <li><a href="https://github.com/medardoc?tab=repositories" target="_blank">Proyectos</a></li>
-            <li><a href="/index/contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+<header>   
+    <br>
+    <!-- Logo dela empresa -->
+<div class="Box">
+    <img src="img/logoW.png" alt="Imagen 1">
+</div>
 </header>
-<body>
-      <!--Buscador-->
-    <div class="CentrarBuscador"><div class="InputContainer">
-        <input placeholder="Buscar en youtube..." id="searchInput" class="input" name="text" type="text">
-        <button onclick="buscarYoutube()">Buscar</button>
-      </div></div>
-     <script>
-        function buscarYoutube() {
-             var query = document.getElementById('searchInput').value;
-            if(query.trim() !==''){
-                var url ='https://www.youtube.com/' + encodeURIComponent(query);
-                window.location.href = url;
-            }
-        }
-      </script>
 <br>
+<body>
 <!-- Slider de imágenes -->
 <div class="slider">
     <div class="slides">
-        <div class="slide"><img src="img/capa8.jpg" alt="Imagen 1"></div>
-        <div class="slide"><img src="img/login.png" alt="Imagen 2"></div>
-        <div class="slide"><img src="img/valentine.png" alt="Imagen 3"></div>
-        <div class="slide"><img src="img/trabajando.jpg" alt="Imagen 4"></div>
-        <div class="slide"><img src="img//latm.png" alt="Imagen 5"></div>
-        <div class="slide"><img src="img/trabajando3.jpg" alt="Imagen 6"></div>
+        <div class="slide"><img src="img/Cocina.jpg" alt="Imagen 1"></div>
+        <div class="slide"><img src="img/muebleBaño.jpeg" alt="Imagen 2"></div>
+        <div class="slide"><img src="img/cocina4.jpeg" alt="Imagen 3"></div>
+        <div class="slide"><img src="img/cocina5.jpeg" alt="Imagen 4"></div>
+        <div class="slide"><img src="img/cocina6.jpeg" alt="Imagen 5"></div>
+        <div class="slide"><img src="img/muebletv.jpeg" alt="Imagen 6"></div>
         <!-- Agrega más imágenes según sea necesario -->
     </div>
 </div>
-
-   <script src="/JS/script.js"></script>
-
-    <br>
-    <!--Colocamos unas referncias-->
-    <h3>Mire nuestros trabajos de:</h3>
- <div class="Enlaces"><nav>
-        <a href="index2.html">Marmoleria & Gasfitería</a>
-
-    </nav></div>
-    <br>
     <div id="chat-bubble">
         <div id="chat-icon">+</div>
     </div>
@@ -68,74 +40,38 @@
         <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
         <button id="send-button">Enviar</button>
     </div>
-
-    <script src="/JS/script.js"></script>
-
 <!--Con esta etiqueta damos espacio-->
 <br>
        <!--Agregamos el main para aplicar las secciones-->
     <main>
-        <!--Seccion desordenada-->
         <section>
-            <h2> Nuestra Experiencia laboral</h2>
-            <h4>Muebleria:</h4>
-            <ol>
+            <h3> Nuestros trabajos:</h3>
+            <ul>
+                <li>Marmoleria</li>
+                <li>Muebleria:</li>
                 <li>Closet</li>
                 <li>Cocinas</li>
                 <li>Dormitorios</li>
                 <li>Muebles para baños</li>
                 <li>Cocinas empotradas</li>
-            </ol>
-            <h4>Marmoleria:</h4>
-            <ol>
                 <li>Baños</li>
                 <li>Pisos</li>
                 <li>Livin</li>
                 <li>Patios</li>
-            </ol>
-           
+            
+            </ul>  
         </section>
-
-<!--seccion ordenada-->
         <section>
-            <h2>Secciones para conocernos más</h2>
+            <h3>Nuestros canales de contactos:</h3>
             <ul>
-                <li><a href="https://deditec.es/reparacion-web/">Nuestro sitio de reparaciones</a></li>
-                <li><a href="https://tripleten.com/es-chl/data-analyst/meet/?utm_source=google&utm_medium=cpc&utm_campaign=inhouse_gl_chl_meetland_da_ua_sem_424&utm_content=cid--21170586137inhouse_gl_chl_meetland_da_ua_sem_424_gid--160433506269_adset--_creative--696074475262_adname--_network--g_tid--kwd-27567871189_tg--_placement--_dvc--c_loc--1003325&utm_term=_key--curso%20de%20python&gad_source=1&gclid=EAIaIQobChMIk6LB1666hQMVJUxHAR0qFA4QEAAYAiAAEgKJv_D_BwE">Compra nuestros cursos</a></li>
-                
-                
+                <li>Instagram: @WorkHomeChile</li>
+                <li><a href="https://tripleten.com/es-chl/data-analyst/meet/?utm_source=google&utm_medium=cpc&utm_campaign=inhouse_gl_chl_meetland_da_ua_sem_424&utm_content=cid--21170586137inhouse_gl_chl_meetland_da_ua_sem_424_gid--160433506269_adset--_creative--696074475262_adname--_network--g_tid--kwd-27567871189_tg--_placement--_dvc--c_loc--1003325&utm_term=_key--curso%20de%20python&gad_source=1&gclid=EAIaIQobChMIk6LB1666hQMVJUxHAR0qFA4QEAAYAiAAEgKJv_D_BwE">Facebook</a></li>
+                <li>Celular: +56 931462301</li>
             </ul>
-            <!--Tablas de comparacion con borde-->
-            <div class="miTablaCentreda"><table border="1">
-                <caption><h1>Aspectos generales de Work Home Chile</h1></caption>
-                <br>
-
-                <thead>
-                    <tr>
-                        <th>Muebleria</th>
-                        <th>Carpinteria</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Glasfiteria</td>
-                        <td>Marmoleria</td>
-                    </tr>
-                    <tr>
-                        <td>Tapizados de muebles</td>
-                        <td>Vidrieria y espejos</td>
-                    </tr>
-                    <tr>
-                        <td>Albañileria</td>
-                        <td>Ambientes de interiores</td>
-                    </tr>
-                </tbody>
-            </table></div>
         </section>
     </main>
-    <br>
-    <hr>
-
+   
+    <script src="JS/script.js"></script>
     <footer>
         <p>&copy; 2024 WorkHomeChile. Todos los derechos reservados.</p>
     </footer>

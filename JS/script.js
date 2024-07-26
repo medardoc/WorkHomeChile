@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Verificar si el mensaje del usuario es una cadena (String)
         if (isNaN(userMessage)) {
             switch (userMessage.toLowerCase()) {
-                case 'hablarnos al whatsapp':
+                case 'whatsapp':
                     setTimeout(function() {
                         appendMessage('bot', '¡Claro! Puedes contactarnos a través de WhatsApp al número +123456789.');
                     }, 500);
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         appendMessage('bot', 'Si prefieres llamarnos, nuestro número de teléfono es +987654321. Estamos disponibles para ayudarte.');
                     }, 500);
                     break;
-                case 'envíanos un correo':
+                case 'correo':
                     setTimeout(function() {
                         appendMessage('bot', 'Si prefieres comunicarte por correo electrónico, puedes escribirnos a info@workhomechile.com. Te responderemos lo antes posible.');
                     }, 500);
