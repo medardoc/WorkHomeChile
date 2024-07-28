@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - Workhomechile</title>
+    <link rel="icon" href="img/logoW.png" type="image/png">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li class="dropdown">
+                            <a href="#"><img src="img/logoW.png" width="130" height="130" alt="Logo Worhomechile"></a>
+                            <ul class="dropdown-content">
+                                <li><a href="productos.html">Nuestros Productos</a></li>
+                                <li><a href="servicios.html">Nuestros Servicios</a></li>
+                                <li><a href="index.html">Volver al Home</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Contáctanos</h1>
+        <p>Envíanos tus consultas y los productos que deseas cotizar.</p>
+       
+        <form action="#" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <br>
+        
+        <!-- Sección de mapa -->
+        <h2>Nuestra ubicación</h2>
+        <div id="map"></div>
+
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script>
+            // Inicialización del mapa y configuración de la vista
+            var map = L.map('map').setView([-33.538722, -70.557694], 15);
+
+            // Cargar y mostrar un mapa de tiles (OpenStreetMap en este caso)
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '© OpenStreetMap'
+            }).addTo(map);
+
+            // Añadir un marcador en la ubicación de Workhomechile
+            L.marker([-33.538722, -70.557694]).addTo(map)
+                .bindPopup('Workhomechile')
+                .openPopup();
+        </script>
+        <br>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+       
+    </main>
+    <footer>
+        <section id="contactos">
+            <h3>Nuestros canales para contactarnos:</h3>
+            <div class="contacto">
+                <img src="img/Instagram_logo_2022.svg-removebg-preview.png" alt="Instagram">
+                <p>@workhomechile</p>
+            </div>
+            <div class="contacto">
+                <img src="img/Facebook-removebg-preview.png" alt="Facebook">
+                <p>Workhomechile</p>
+            </div>
+            <div class="contacto">
+                <img src="img/llamar.png" alt="Llamar">
+                <p>+56 931462301</p>
+            </div>
+        </section>
+        <p>&copy; 2024 Workhomechile. Todos los derechos reservados.</p>
+    </footer>
+    <script src="JS/script.js"></script>
+</body>
+</html>

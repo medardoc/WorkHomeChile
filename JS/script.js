@@ -1,3 +1,50 @@
+// Inicializa EmailJS con tu ID de usuario
+emailjs.init('service_u2ucdmo');
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita el envío del formulario por defecto
+
+        // Obtén los valores del formulario
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Prepara el objeto de parámetros para EmailJS
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            message: message,
+            to_email: 'trabajo_tony@hotmail.com'
+        };
+
+        // Enviar el correo electrónico
+        emailjs.send('service_u2ucdmo', 'template_vp33xej', templateParams)
+            .then((response) => {
+                console.log('Correo enviado con éxito!', response.status, response.text);
+                alert('¡Gracias por contactarnos! Pronto nos pondremos en contacto contigo.');
+            }, (error) => {
+                console.error('Error al enviar el correo:', error);
+                alert('Hubo un problema al enviar tu mensaje. Por favor, intenta nuevamente.');
+            });
+    });
+});
+
+// para que las tarjetas de sercios.html puedan redirigir a contactos.html
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.card');
+    
+    cards.forEach(card => {
+        if (card.dataset.contact) {
+            card.addEventListener('click', () => {
+                window.location.href = 'contactanos.html';
+            });
+        }
+    });
+});
+
+
+
 // JavaScript para controlar el slider
 let slideIndex = 0;
 showSlides();
