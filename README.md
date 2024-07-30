@@ -18,4 +18,6 @@ Nuestro Footer:
 
 
 El chatboot:
-![Captura de Pantalla 2024-07-26 a la(s) 12 13 20](https://github.com/user-attachments/assets/d12dc656-491f-477c-b15d-bd384df520a3)
+
+![Captura de Pantalla 2024-07-30 a la(s) 15 21 54](https://github.com/user-attachments/assets/391b6f45-265f-4f4b-978d-92c828455aeb)
+
