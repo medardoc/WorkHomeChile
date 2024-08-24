@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+//Para controlar los videos
 let currentVideoIndex = 0;
 
 function showVideoSlides(index) {
@@ -35,7 +36,6 @@ function plusVideoSlides(step) {
 
 showVideoSlides(currentVideoIndex);
 
-
 // JavaScript para controlar el slider
 let slideIndex = 0;
 showSlides();
@@ -52,4 +52,3 @@ function showSlides() {
     slides[slideIndex - 1].style.display = 'block';
     setTimeout(showSlides, 3000); // Cambiar imagen cada 3 segundos
 }
-

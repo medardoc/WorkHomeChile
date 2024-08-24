@@ -102,16 +102,6 @@ nav ul li a:hover {
   display: block;
 }
 
-.slider {
-  position: relative;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto 40px;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 .slides {
   display: flex;
   transition: transform 0.5s ease-in-out;
@@ -130,6 +120,8 @@ nav ul li a:hover {
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
 
 main {
   padding: 20px;
