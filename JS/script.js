@@ -1,8 +1,7 @@
 // para que las tarjetas de sercios.html puedan redirigir a contactos.html
-
 document.addEventListener('DOMContentLoaded', () => {
+    // Control de tarjetas para redirigir
     const cards = document.querySelectorAll('.card');
-    
     cards.forEach(card => {
         if (card.dataset.contact) {
             card.addEventListener('click', () => {
@@ -10,45 +9,59 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
-});
 
-//Para controlar los videos
-let currentVideoIndex = 0;
+   // Control del slider de videos
+   const videoWrapper = document.querySelector('.video-slider-wrapper');
+   const videoSlides = document.querySelectorAll('.video-slide');
 
-function showVideoSlides(index) {
-    const slides = document.querySelectorAll(".video-slide");
-    const totalSlides = slides.length;
+   if (videoWrapper && videoSlides.length > 0) {
+       let currentVideoIndex = 0;
 
-    if (index >= totalSlides) {
-        currentVideoIndex = 0;
-    } else if (index < 0) {
-        currentVideoIndex = totalSlides - 1;
-    } else {
-        currentVideoIndex = index;
-    }
+       function showVideoSlides(index) {
+           const totalSlides = videoSlides.length;
 
-    document.querySelector('.video-slider-wrapper').style.transform = `translateX(-${currentVideoIndex * 100}%)`;
-}
+           if (index >= totalSlides) {
+               currentVideoIndex = 0;
+           } else if (index < 0) {
+               currentVideoIndex = totalSlides - 1;
+           } else {
+               currentVideoIndex = index;
+           }
 
-function plusVideoSlides(step) {
-    showVideoSlides(currentVideoIndex + step);
-}
+           videoWrapper.style.transform = `translateX(-${currentVideoIndex * 100}%)`;
+       }
 
-showVideoSlides(currentVideoIndex);
+       window.plusVideoSlides = function(step) {
+        showVideoSlides(currentVideoIndex + step);
+    };
+    
 
-// JavaScript para controlar el slider
-let slideIndex = 0;
-showSlides();
+       showVideoSlides(currentVideoIndex); // Inicializar slider
+   } else {
+       console.warn('No se encontraron elementos para el slider de videos.');
+   }
 
-function showSlides() {
+
+    // Slider de imágenes
     const slides = document.querySelectorAll('.slide');
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none';
+    if (slides.length > 0) {
+        let slideIndex = 0;
+
+        function showSlides() {
+            slides.forEach(slide => slide.style.display = 'none');
+
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = 'block';
+            setTimeout(showSlides, 3000); // Cambiar cada 3 segundos
+        }
+
+        showSlides();
+    } else {
+        console.warn('No se encontraron elementos para el slider de imágenes.');
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-    slides[slideIndex - 1].style.display = 'block';
-    setTimeout(showSlides, 3000); // Cambiar imagen cada 3 segundos
-}
+
+    console.log('JavaScript cargado correctamente.');
+});
